@@ -37,7 +37,7 @@ console.log("\nQuestão5: \nArray da questão1: ", questao1, "\nUnir em String: 
 //Questao6 Numeros pares divididos por traços
 numerosPares("025468");
 function numerosPares(n){
-    console.log("\nQuestão6: Número escolhido = ", n);
+    console.log("\nQuestão6: \nNúmero escolhido = ", n);
     let numberArray = n.split("");
     console.log(numberArray);  
 
@@ -49,4 +49,28 @@ function numerosPares(n){
     console.log(numberArray.join(''));
 }
 
-//Questão7
+//Questão7 item mais frequente
+const array7 = [1, 2, 3, 4, 2, 3, 2, 3, 3, 0, 3];   // 3
+Frequente(array7);
+function Frequente(array){
+    console.log("\nQuestão7: \nArray escolhido: ",array);
+    let cont1 = 0;
+    let cont2 = 0;
+    let moda = 0;
+    for(let i=0; i<array.length; i++){
+        for(let y=0; y<array.length; y++){
+            if(array[i] == array[y+1]){
+                cont1++;
+            }
+            if(cont1 == 0) cont1 = 1;
+            // moda = array[i];
+        }
+        if(cont1 > cont2){    // cont1 = 3  cont2 = 1
+            moda = array[i];  // moda = 2
+            cont2 = cont1;    // cont2 = 3
+        }
+        cont1 = 0;
+    }
+    console.log("\nNúmero mais frequente: ",moda);
+    
+}
