@@ -34,3 +34,19 @@ function UltimoElemento(array, n){
 let arrayString = questao1.toString();
 console.log("\nQuestão5: \nArray da questão1: ", questao1, "\nUnir em String: ",arrayString);
 
+//Questao6 Numeros pares divididos por traços
+numerosPares("025468");
+function numerosPares(n){
+    console.log("\nQuestão6: Número escolhido = ", n);
+    let numberArray = n.split("");
+    console.log(numberArray);  
+
+    for(let i=0; i<numberArray.length; i++){
+        if((numberArray[i] % 2 == 0) && (numberArray[i+1] % 2 == 0)){
+            numberArray.splice((i+1),0,"-");
+        }
+    }
+    console.log(numberArray.join(''));
+}
+
+//Questão7
