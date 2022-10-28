@@ -50,7 +50,7 @@ function numerosPares(n){
 }
 
 //Questão7 item mais frequente
-const array7 = [1, 2, 3, 4, 2, 3, 2, 3, 3, 0, 3];   // 3
+const array7 = ['1', '2', '3', '4', '2', '2', '0', '3', [1], [1], [1], [2]];   // 3
 Frequente(array7);
 function Frequente(array){
     console.log("\nQuestão7: \nArray escolhido: ",array);
@@ -71,6 +71,24 @@ function Frequente(array){
         }
         cont1 = 0;
     }
-    console.log("\nNúmero mais frequente: ",moda);
+    console.log("\nNúmero mais frequente: ", moda);
     
+}
+
+//Questao8 
+const array8 = ["abc", "abc", ["abc"], ["abc"], '-', 3, 3, 4]; 
+Repetiu(array8);
+function Repetiu(array){
+    console.log("\nQuestão8: \nArray escolhido: ",array);
+
+    for(let i=0; i<array.length; i++){
+        for(let y=0; y<array.length; y++){            
+            if(i != (y+1)){
+                if(array[i] == array[y+1]){
+                    array.splice([y+1],1);
+                }
+            }
+        }        
+    }
+    console.log("\nArray sem as repetições: ", array);
 }
