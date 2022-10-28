@@ -39,7 +39,7 @@ let arrayString = questao1.toString();
 console.log("\nQuestão5: \nArray da questão1: ", questao1, "\nUnir em String: ",arrayString);
 
 //Questao6
-//Numeros pares divididos por traços
+//Numeros pares divididos por traços - métodos splice e join
 numerosPares("025468");
 function numerosPares(n){
     console.log("\nQuestão6: \nNúmero escolhido = ", n);
@@ -82,7 +82,7 @@ function Frequente(array){
 }
 
 //Questao8 
-//Removendo os elementos repetidos do array
+//Removendo os elementos repetidos do array - método splice
 const array8 = ["abc", "abc", ["abc"], ["abc"], '-', 3, 3, 4]; 
 Repetiu(array8);
 function Repetiu(array){
@@ -101,7 +101,7 @@ function Repetiu(array){
 }
 
 //Questao9
-//soma de cada indice individual entre dois arrays
+//Soma de cada indice individual entre dois arrays
 const array01 = [1, 3, 5, 7, 9, 11];
 const array02 = [2, 4, 6, 8, 10];
 SomaArrays(array01,array02);
@@ -119,4 +119,17 @@ function SomaArrays(array1, array2){
     }
     console.log("\nSomando os valores nos mesmos índices, resulta em: ", novoArray);
     if(array1.length != array2.length) console.log("Arrays com tamanhos distintos");
+}
+
+//Questao10
+//Adicionar vetorAdiciona em vetorPilha - método concat
+const vetorPilha = [1, 2, 3, 4, 5];
+const vetorAdiciona = [6, 7, 8, 9, 10];
+JuntaVetores(vetorPilha, vetorAdiciona);
+function JuntaVetores(vetor1, vetor2){
+    console.log("\nQuestão10: \nVetorPilha: ", vetor1);
+    console.log("VetorAdiciona:: ", vetor2);
+    const novoArray = vetor1.concat(vetor2);
+
+    console.log("NovoVetor: ", novoArray);
 }
