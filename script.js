@@ -1,12 +1,14 @@
+//Questao1
 //Array.isArray verifica se a entrada é array ou nao, true ou false, respectivamente
 const questao1 = ['item1', 'item2', 'item3', 'item4', 'item5'];
 console.log("Questão1: \nEntrada:", questao1," é Array?", Array.isArray(questao1));
 
+//Questao2
 //slice é quem copia um array
 var clone = questao1.slice();
 console.log("\nQuestão2: \nArray da questão1: ", questao1, "\nSeu clone: ", clone);
 
-
+//Questao3
 //Primeiro Elemento e Ns primeiros elementos
 console.log("\nQuestão3: \nArray da questão1: ", questao1, "\nExibir Elementos: ");
 PrimeiroElemento(questao1, 3);
@@ -18,6 +20,7 @@ function PrimeiroElemento(array, n){
     }
 }
 
+//Questao4
 //Último Elemento e Ns últimos elementos
 console.log("\nQuestão4: \nArray da questão1: ", questao1, "\nExibir Elementos: ");
 UltimoElemento(questao1, 3);
@@ -30,11 +33,13 @@ function UltimoElemento(array, n){
     }
 }
 
+//Questao5
 //Array para String apenas utilizando o toString
 let arrayString = questao1.toString();
 console.log("\nQuestão5: \nArray da questão1: ", questao1, "\nUnir em String: ",arrayString);
 
-//Questao6 Numeros pares divididos por traços
+//Questao6
+//Numeros pares divididos por traços
 numerosPares("025468");
 function numerosPares(n){
     console.log("\nQuestão6: \nNúmero escolhido = ", n);
@@ -49,7 +54,8 @@ function numerosPares(n){
     console.log(numberArray.join(''));
 }
 
-//Questão7 item mais frequente
+//Questão7 
+//item mais frequente
 const array7 = ['1', '2', '3', '4', '2', '2', '0', '3', [1], [1], [1], [2]];   // 3
 Frequente(array7);
 function Frequente(array){
@@ -76,10 +82,11 @@ function Frequente(array){
 }
 
 //Questao8 
+//Removendo os elementos repetidos do array
 const array8 = ["abc", "abc", ["abc"], ["abc"], '-', 3, 3, 4]; 
 Repetiu(array8);
 function Repetiu(array){
-    console.log("\nQuestão8: \nArray escolhido: ",array);
+    console.log("\nQuestão8: \nArray escolhido: ", array);
 
     for(let i=0; i<array.length; i++){
         for(let y=0; y<array.length; y++){            
@@ -91,4 +98,25 @@ function Repetiu(array){
         }        
     }
     console.log("\nArray sem as repetições: ", array);
+}
+
+//Questao9
+//soma de cada indice individual entre dois arrays
+const array01 = [1, 3, 5, 7, 9, 11];
+const array02 = [2, 4, 6, 8, 10];
+SomaArrays(array01,array02);
+function SomaArrays(array1, array2){
+    console.log("\nQuestão9: \nArray1 escolhido: ", array1);
+    console.log("Array2 escolhido: ", array2);
+    const novoArray = [];
+
+    for(let i=0; i<array1.length; i++){
+        for(let y=0; y<array2.length; y++){            
+            if(i == y){
+               novoArray[i] = array1[i]+array2[i];
+            }
+        }        
+    }
+    console.log("\nSomando os valores nos mesmos índices, resulta em: ", novoArray);
+    if(array1.length != array2.length) console.log("Arrays com tamanhos distintos");
 }
